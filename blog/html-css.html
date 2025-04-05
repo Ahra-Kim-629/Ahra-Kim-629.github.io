@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AHRA's Dev Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>AHRA's BLOG</h1>
+<nav class="top-menu">
+    <a href="home.html">HOME</a>
+    <a href="blog.html">BLOG</a>
+    <a href="about-me.html">ABOUT ME</a>
+    <a href="...-.html">...</a>
+</nav>
+</header>
+    
+<div class="main-content">
+<div class="content">
+    <h2>Understanding CSS Positioning: relative, absolute, and fixed</h2>
+    
+    <p>When I first started learning CSS, one thing that confused me a lot was how to move things around on the page. I discovered that the <strong>position</strong> property is the key to doing this! Today, I want to explain the difference between <code>relative</code>, <code>absolute</code>, and <code>fixed</code> positioning in CSS in a simple way — just like I would to a friend.</p>
+    
+    <h3>🔹 position: relative</h3>
+    <p>This means “move this element a little from where it would normally be.” The space it would take up stays the same. Think of it like shifting a sticky note slightly without removing it from the wall.</p>
+    
+    <pre><code>div {
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }</code></pre>
+    
+    <p>In this example, the element will move 20px down and 20px to the right, but the original spot it was in still takes up space.</p>
+    <div class="image-row">
+        <img src="images/relative-vscode-origin.png" alt="relative-vscode-origin" width="200">
+        <img src="images/relative-pic-origin.png" alt="relative-pic-origin" width="200">
+    </div>
+    <div class="image-row">
+        <img src="images/relative-vscode.png" alt="relative-vscode" width="200">
+        <img src="images/relative-pic-moved.png" alt="relative-pic-moved" width="200">
+    </div>
+      
+    <h3>🔸 position: absolute</h3>
+    <p>This one is a bit trickier. It means “take this element OUT of the normal flow of the page” and place it exactly where you want, based on its closest positioned parent (or the whole page if none exists).</p>
+    
+    <pre><code>div {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }</code></pre>
+    
+    <p>This element will be placed in the top-right corner of its container. If there's no container with <code>position: relative</code> or similar, it will stick to the top-right of the whole page.</p>
+    <div class="image-row">
+        <img src="images/absolute-vscode.png" alt="absolute-vscode" width="200">
+        <img src="images/absolute-pic.png" alt="absolute-pic" width="200">
+    </div>
+  
+    <h3>📌 position: fixed</h3>
+    <p>This one is like gluing an element to the browser window! Even if you scroll, it stays in the same place.</p>
+  
+    <pre><code>div {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }</code></pre>
+  
+    <p>Now the element will stay at the bottom-right of your screen even if you scroll. This is often used for sticky menus or “Back to Top” buttons.</p>
+    <div class="image-row">
+        <img src="images/fixed-vscode.png" alt="fixed-vscode" width="200">
+        <img src="images/fixed.gif" alt="fixed" width="200">
+    </div>
+  
+    <h3>🌟 Summary</h3>
+    <ul>
+      <li><strong>relative</strong>: moves from its normal spot, space still remains</li>
+      <li><strong>absolute</strong>: removed from normal layout, positioned in a container</li>
+      <li><strong>fixed</strong>: sticks to the screen no matter what</li>
+    </ul>
+  
+    <p>I hope this helps make the difference a little clearer! Playing with examples and seeing how they behave was the best way for me to understand it — so give it a try!</p>
+  </div>
+  
+</div>
+    
+</body>
+</html>
